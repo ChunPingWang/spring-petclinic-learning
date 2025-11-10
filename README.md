@@ -1,4 +1,4 @@
-# Spring Pet Learning - 春天微服務學習實戰
+# Spring Pet Learning - Spring 微服務學習實戰
 
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Java](https://img.shields.io/badge/java-17-orange)
