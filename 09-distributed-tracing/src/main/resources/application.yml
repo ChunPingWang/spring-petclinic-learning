@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: zipkin-server
+  sleuth:
+    sampler:
+      probability: 1.0  # 100% 採樣率（學習用途），生產環境應該設置更低
+  zipkin:
+    enabled: true
+    http-sender:
+      url: http://localhost:9411
+
+server:
+  port: 9411
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.sleuth: DEBUG
+    zipkin2: DEBUG

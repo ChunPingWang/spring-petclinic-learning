@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: basic-spring-boot
+
+server:
+  port: 8080
+
+# 自定義配置
+app:
+  welcome-message: "歡迎來到 Spring Boot 學習之旅！"
+
+# Actuator 配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

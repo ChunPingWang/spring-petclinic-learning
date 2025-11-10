@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: circuit-breaker-demo
+
+server:
+  port: 8084
+
+# Resilience4j 斷路器配置
+resilience4j:
+  circuitbreaker:
+    instances:
+      # 示例：外部服務調用斷路器
+      externalServiceCall:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        
+  retry:
+    instances:
+      externalServiceCall:
+        maxAttempts: 3
+        waitDuration: 1000
+
+logging:
+  level:
+    io.github.resilience4j: DEBUG

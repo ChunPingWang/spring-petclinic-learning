@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 使用本地 Git 儲存庫作為配置來源
+          uri: file://${java.io.tmpdir}/config-repo
+          searchPaths: '{application}'
+          default-label: main
+
+server:
+  port: 8888
+
+logging:
+  level:
+    org.springframework.cloud.config.server: DEBUG
