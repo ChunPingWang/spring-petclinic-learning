@@ -5,7 +5,7 @@
 ![Spring Boot](https://img.shields.io/badge/spring%20boot-3.2.x-green)
 ![Spring Cloud](https://img.shields.io/badge/spring%20cloud-2023.0.x-green)
 
-> 一份為高中生程度量身打造的 **30 天 Spring Boot / Spring Cloud 微服務學習計劃**。
+> 一份為初學者程度量身打造的 **30 天 Spring Boot / Spring Cloud 微服務學習計劃**。
 > 
 > 採用 **Monorepo 架構**，包含 10+ 獨立學習模組，每個模組都是完全可執行的應用程式。
 > 
